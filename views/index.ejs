@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    button[type="submit"] 
+    {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+    font-size: 18px;
+  }
+
+  input[type="time"] {
+    width: 40%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="text"]  {
+    width: 81%;
+    height: 50px;
+  }
+  input[type="date"]  {
+    width: 81%;
+    height: 50px;
+  }
+  /* #time
+  {
+    display: inline;
+  } */
+  .flex-container1 {
+  width: 50%;
+
+}
+    </style>
+
+  </head>
+<body>
+    <form action="/aliens" method="post">
+      
+        <label for="Title"> Title :</label>
+        <input type="text" id="Title" name = "Title">
+        <br>
+        <label for="Interviewer"> Interviewer :</label>
+        <input type="text" id="Interviewer" name = "Interviewer">
+        <br>
+        <label for="Location"> Location :</label>
+        <input type="text" id="Location" name = "Location">
+        <br>
+        <label for="Meeting_Link"> Meeting Link :</label>
+        <input type="text" id="Meeting_Link" name = "Link">
+        <br>
+        <label for="Date">Date:</label>
+      <input type="text" id="Date" name="Date" name = "Date">
+      <br>
+        <label for="start-time" class="flex-container1">Start Time:</label>
+        <label for="end-time" class="flex-container1">End Time:</label>  
+        <input type="text" id="start-time" class="flex-container" name="Start">
+        <input type="text" id="end-time" class="flex-container" name="End">
+      <br>
+      <label for="Note"> Note :</label>
+        <input type="text" id="Note" name = "Note">
+        <br>
+        <br>
+    
+      <button type="submit" method="post">Schedule</button>
+    </form>
+</body>
+</html>

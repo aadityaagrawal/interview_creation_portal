@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleish.css">
+</head>
+
+<body>
+    <h1>Application</h1>
+    <div class="flex-container">
+        <div class="applicant" style="flex-grow: 2">
+
+            <button type="submit" class="add_applicant" onclick={makeUser()}>
+                Add Applicant
+            </button>
+            <h2>Applicant</h2>
+            <div id="apply"></div>
+            <% if(data.length>0){%>
+                <% data.forEach(us=> {%>
+
+                    <section id="user_info">
+
+                        <h4>Name : <%= us.Name %>
+                        </h4>
+                        <h4>Email : <%= us.Email %>
+                        </h4>
+                        <h4>Mobile Number : <%= us.Mobile %>
+                        </h4>
+                        <% }) %>
+                            <%} %>
+                                <div class="dummyuser">
+                                    <div class="dummyname">
+                                        Adamya Sharma
+                                    </div>
+                                    <div class="dummymail">
+                                        sharmaadamya19@gmail.com
+                                    </div>
+                                </div>
+
+        </div>
+        <div class="v1">
+
+        </div>
+        <div class="upcoming" style="flex-grow: 8">
+            <button type="submit" class="add_applicant">
+                Schedule
+            </button>
+            <h2>Upcoming</h2>
+            <hr>
+            <% if(data.length>0){%>
+                <% data.forEach(non=> {%>
+
+                    <section id="interview_info">
+
+                        <h4>Title : <%= non.Title %>
+                        </h4>
+                        <h4>Interviewer : <%= non.Interviewer %>
+                        </h4>
+                        <h4>Location : <%= non.Location %>
+                        </h4>
+                        <h4>Link : <%= non.Link %>
+                        </h4>
+                        <h4>Date : <%= non.Date %>
+                        </h4>
+                        <h4>Start : <%= non.Start %>
+                        </h4>
+                        <h4>End : <%= non.End %>
+                        </h4>
+                        <h4>Note : <%= non.Note %>
+                        </h4>
+                        <button class="add_applicant">
+                            Edit
+                        </button>
+                        <button class="add_applicant">
+                            Delete
+                        </button>
+                        <hr>
+                    </section>
+                    <% }) %>
+                        <%} %>
+
+
+        </div>
+    </div>
+
+</body>
+<script>
+    makeUser = () => {
+        let a = document.getElementById("apply");
+        a.innerHTML = `<div class="card">
+  <form action="/users" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="Name" placeholder="Enter your name">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="Email" placeholder="Enter your email">
+    <label for="mobile">Mobile:</label>
+    <input type="number" id="mobile" name="Mobile" placeholder="Enter your number">
+    <button type="submit" method="post">Submit</button>
+  </form>
+</div>`
+
+
+
+    }
+</script>
+
+</html>
