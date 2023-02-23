@@ -1,13 +1,14 @@
 const express = require("express")
 const router = express.Router()
-// const Alien = require("../models/alien")
 const User = require("../models/user")
 
 
 router.get("/", async (req, res) => {
+    console.log("RightPlace")
     try {
-        const user = await User.find()
-        res.render('main_page',{data:users})
+        const user = await User.find({});
+        res.json(user);
+        console.log(user);
     } catch (err) {
         res.send("Error " + err)
     }

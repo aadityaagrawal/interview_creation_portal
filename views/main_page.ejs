@@ -19,19 +19,15 @@
             </button>
             <h2>Applicant</h2>
             <div id="apply"></div>
-            <% if(data.length>0){%>
-                <% data.forEach(us=> {%>
-
                     <section id="user_info">
-
-                        <h4>Name : <%= us.Name %>
+                        <h4>Name : <%= data.Name %>
                         </h4>
-                        <h4>Email : <%= us.Email %>
+                        <h4>Email : <%= data.Email %>
                         </h4>
-                        <h4>Mobile Number : <%= us.Mobile %>
+                        <h4>Mobile : <%= data.Mobile %>
                         </h4>
-                        <% }) %>
-                            <%} %>
+                    </section>
+                    
                                 <div class="dummyuser">
                                     <div class="dummyname">
                                         Adamya Sharma
@@ -89,6 +85,9 @@
 
 </body>
 <script>
+  
+    
+
     makeUser = () => {
         let a = document.getElementById("apply");
         a.innerHTML = `<div class="card">
@@ -102,7 +101,7 @@
     <button type="submit" method="post">Submit</button>
   </form>
 </div>`
-
+    
 
 
     }

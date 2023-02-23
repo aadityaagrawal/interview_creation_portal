@@ -6,7 +6,7 @@ const Alien = require("../models/alien")
 router.get("/", async (req, res) => {
     try {
         const aliens = await Alien.find()
-       res.render('main_page',{data:aliens})
+        res.render('main_page',{data:aliens})
     } catch (err) {
         res.send("Error " + err)
     }
@@ -56,22 +56,7 @@ router.post('/update/:id', async (req,res) => {
         console.error(err);
     }
 })
-// User Data
 
-// router.post("/user", async (req, res) => {
-//     console.log("rightplace")
-//     console.log(req.body.Start)
-//     const user = new User({
-//         Name: req.body.Name,
-//         Email: req.body.Email,
-//         Mobile: req.body.Mobile
-//     })
-//     try {
-//         const a1 = await user.save()
-//         res.json(a1)
-//     } catch (err) {
-//         res.send("Error"+err)
-//     }
-// })
+
 
 module.exports = router
