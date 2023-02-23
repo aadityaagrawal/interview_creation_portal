@@ -1,6 +1,10 @@
 const mongoose = require("mongoose")
 
 const alienSchema = new mongoose.Schema({
+    Meetid : {
+        type: String,
+        required : true
+    },
 
     Title : {
         type: String,
@@ -30,6 +34,10 @@ const alienSchema = new mongoose.Schema({
     End : {
         type : String,
         required : true
+    },
+    Participants : {
+        type : String,
+        required : false
     },
     Note : {
         type : String,

@@ -1,33 +1,24 @@
 *{
-    background-color: black;        
-    color: white;
-    margin: 20px;
-    font-size: 40px;
+      
+
 }
 
-.flex-container{
-    display: flex;
-    flex-direction: row;
-}
 
 .add_applicant{
     background-color: transparent;
-    border-color: white;
+    border-color: rgba(5, 5, 5, 0);
     border-width: 1px;
     border-radius: 5px;
     padding: 35px;
     font-size: 30px;
+    color: #000;
 
 }
 
-.add_applicant:hover{
-    background-color: white;
-    color: black;
-}
 
 .vl {
     border-left: 6px solid rgb(255, 255, 255);
-    height: 500px;
+ 
     position: absolute;
 
   }
@@ -64,17 +55,13 @@ background-color: rgba(255, 255, 255, 0.10);
     border: 1px solid #ccc;
   }
   
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 3px;
-    margin-top: 10px;
-    cursor: pointer;
+ 
+  .upcomming{
+    display: flex;
   }
+ 
   
-  button:hover {
-    background-color: #3e8e41;
-  }
-  
+ section{
+  display: flex;
+  flex-direction: row;
+ }
