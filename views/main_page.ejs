@@ -26,13 +26,13 @@
                               <h6 class="card-subtitle mb-2 text-muted">Participants : <%= non.Participants %></h6>
                               <p class="card-text">Note : <%= non.Note %></p>
                               <button type="button" class="btn btn-outline-warning">
-                                <a class ="delete" class="add_applicant" href="http://localhost:9000/aliens/<%= non._id %>">
+                                <a class ="delete" class="add_applicant" href="/aliens/<%= non._id %>">
                                    EDIT
                                 </a>
                             </button>
                           
                             <button type="button" class="btn btn-outline-danger">
-                            <a class ="delete" class="add_applicant" href="http://localhost:9000/aliens/delete/<%= non._id %>">
+                            <a class ="delete" class="add_applicant" href="/aliens/delete/<%= non._id %>">
                                 Delete
                             </a>
                         </button>
