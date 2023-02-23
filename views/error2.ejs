@@ -1,0 +1,17 @@
+<%- include("partials/header") %>
+
+  <body>
+    <h1>  <%= data %></h1>
+    <% if(who.length>0){%>
+        <% for(var i=0;i<who.length;i++) {%>
+
+            
+                   <h3><%= who[i] %></h3>
+                 
+                <hr>
+            
+            <% } %>
+                <%} %>
+     
+  </body>
+  </html>

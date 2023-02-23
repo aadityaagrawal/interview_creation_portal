@@ -9,6 +9,7 @@
            
            
             <hr>
+            <div class="container">
             <% if(data.length>0){%>
                 <% data.forEach(non=> {%>
 
@@ -25,7 +26,7 @@
                               <h6 class="card-subtitle mb-2 text-muted">Participants : <%= non.Participants %></h6>
                               <p class="card-text">Note : <%= non.Note %></p>
                               <button type="button" class="btn btn-outline-warning">
-                                <a class ="delete" class="add_applicant" href="http://localhost:9000/aliens/update/<%= non._id %>">
+                                <a class ="delete" class="add_applicant" href="http://localhost:9000/aliens/<%= non._id %>">
                                    EDIT
                                 </a>
                             </button>
@@ -45,11 +46,18 @@
                     <% }) %>
                         <%} %>
 
-
+            </div>
         </div>
     </div>
-
+<style>
+    .container{
+        display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+    }
+</style>
 </body>
+
 <script>
   
     

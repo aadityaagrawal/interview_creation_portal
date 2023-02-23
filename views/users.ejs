@@ -1,0 +1,51 @@
+<%- include("partials/header") %>
+<body>
+    
+<div class="container">
+
+
+<% if(data.length>0){%>
+    <% data.forEach(non=> {%>
+
+        <section id="interview_info">
+            <div class="card"  >
+                <div class="card-body">
+                  <h5 class="card-title">Title : <%= non.Uid %></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Interviewer : <%= non.Name %></h6>
+               
+                  <h6 class="card-subtitle mb-2 text-muted">Link : <%= non.Email %></h6>
+                  <h6 class="card-subtitle mb-2 text-muted">Date : <%= non.Mobile %></h6>
+   
+               
+                  
+                </div>
+              </div>
+              
+             
+            <hr>
+        </section>
+        <% }) %>
+            <%} %>
+        </div>
+        <button type="button" class="btn btn-outline-danger" id="bt">
+            <a class ="delete" class="add_applicant" href="http://localhost:9000/users/form">
+               ADD USER
+            </a>
+        </button>
+        <style>
+            .container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            #bt{
+                display: flex;
+                justify-content: center;
+                align-items: center;    
+                margin-left: 50%;
+                margin-top: 20px;
+                padding: 20px;
+            }
+        </style>
+        </body>
+        </html>

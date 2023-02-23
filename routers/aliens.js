@@ -32,7 +32,7 @@ router.post("/", async (req, res) => {
         res.render("error",{data:ms})
     }
     const aliens = await Alien.find()
-    var ans = [];
+
     var final = [];
     aliens.forEach(element => {
         if (element.Date == date) {
@@ -41,7 +41,9 @@ router.post("/", async (req, res) => {
 
             if (start < check) {
 
-                ans = element.Participants.split(" ");
+              var ans = element.Participants.split(" ");
+              console.log(ans)
+
                 for (var i = 0; i < par.length; i++) {
                     for (var j = 0; j < ans.length; j++) {
                         if (ans[j] == par[i]) {
@@ -49,15 +51,17 @@ router.post("/", async (req, res) => {
                         }
                     }
                 }
-                console.log(element.Participants);
+                console.log(par);
+
                 console.log(final)
             }
 
         }
     });
     if (final != 0) {
+        console.log(final)
           var msg=" Hold on there is a colliton of time for these particpants are busy at this time"
-        res.render('error', { data: msg, who:final });
+        res.render('error2', { data: msg, who:final });
     }
     else {
         const alien = new Alien({
@@ -105,7 +109,7 @@ router.post('/update/:id', async (req, res) => {
         const interview = await Alien.findByIdAndUpdate(req.params.id, {$set:change},{new:true});
         console.log(interview)
         interview.save()
-        res.redirect(`/aliens/${req.params.id}`);
+        res.redirect("/aliens");
     } catch (err) {
         console.error(err);
         

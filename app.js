@@ -1,14 +1,14 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const path = require("path")
-
+const Alien = require("./models/alien")
 
 const bodyparser=require("body-parser")
 
 const url = "mongodb+srv://aditya:aditya@cluster0.hkjokpz.mongodb.net/?retryWrites=true&w=majority"
 const app = express()
 
-
+mongoose.set('strictQuery', false);
 
 mongoose.connect(url, {useNewUrlParser: true})
 const con = mongoose.connection
@@ -24,6 +24,15 @@ app.set("view engine","ejs")
 app.use(express.static("public"))
 
 app.use(express.json())
+app.get("/", async (req, res) => {
+    try {
+        const aliens = await Alien.find()
+        res.render('main_page', { data: aliens })
+    } catch (err) {
+        res.send("Error " + err)
+    }
+})
+
 
 
 const alienRouter = require("./routers/aliens")

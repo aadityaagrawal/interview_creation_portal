@@ -1,72 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+<%- include("partials/header") %>
     
-    button[type="submit"] 
-    {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    }
-    label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 25px;
-  }
 
-  form {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-
-  button[type="submit"]:hover {
-    background-color: #555;
-  }
-  * {
-    box-sizing: border-box;
-    margin: 5px;
-    padding: 0;
-    font-size: 18px;
-  }
-
-  input[type="time"] {
-    width: 40%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input[type="text"]  {
-    width: 81%;
-    height: 50px;
-  }
-  input[type="date"]  {
-    width: 81%;
-    height: 50px;
-  }
-  /* #time
-  {
-    display: inline;
-  } */
-  .flex-container1 {
-  width: 50%;
-
-}
-    </style>
-
-  </head>
 <body>
 
     <form action="/aliens" method="post">
@@ -95,7 +29,7 @@
         <input type="text" id="end-time" class="flex-container" name="End">
       <br>
       <label for="Participants" class="flex-container1">Participants :</label> 
-      <input type="text" id="end-time" class="flex-container" name="Participants">
+      <input type="text" id="end-time" class="flex-container" placeholder="Enter user seprated by Space" name="Participants">
       <label for="Note"> Note :</label>
         <input type="text" id="Note" name = "Note">
         <br>
@@ -103,5 +37,65 @@
     
       <button type="submit" method="post">Schedule</button>
     </form>
+    <style>
+      
+      button[type="submit"] 
+      {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      }
+      label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 25px;
+    }
+  
+    form {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    button[type="submit"]:hover {
+      background-color: #555;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 5px;
+      padding: 0;
+      font-size: 18px;
+    }
+  
+    input[type="time"] {
+      width: 40%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    input[type="text"]  {
+      width: 81%;
+      height: 50px;
+    }
+    input[type="date"]  {
+      width: 81%;
+      height: 50px;
+    }
+    /* #time
+    {
+      display: inline;
+    } */
+    .flex-container1 {
+    width: 50%;
+  
+  }
+      </style>
 </body>
 </html>
