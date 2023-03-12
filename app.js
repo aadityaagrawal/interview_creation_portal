@@ -2,10 +2,10 @@ const express = require("express")
 const mongoose = require("mongoose")
 const path = require("path")
 const Alien = require("./models/alien")
-
+require('dotenv').config(); 
 const bodyparser=require("body-parser")
 
-const url = "mongodb+srv://aditya:aditya@cluster0.hkjokpz.mongodb.net/?retryWrites=true&w=majority"
+const url = process.env.API_KEY;
 const app = express()
 
 mongoose.set('strictQuery', false);
