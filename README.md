@@ -27,3 +27,17 @@ The Interview Scheduler App is built using the following technologies:
 * Express
 * MongoDB
 * Bootstrap
+
+### Screenshots: 
+Home Page :
+![alt text](https://github.com/aadityaagrawal/interview_creation_portal/blob/main/assets/Home.png "Home Page")
+
+Meeting Scheduling Page:
+![alt text](https://github.com/aadityaagrawal/interview_creation_portal/blob/main/assets/create_meet.png "Scheduling Page")
+
+User Display:
+![alt text](https://github.com/aadityaagrawal/interview_creation_portal/blob/main/assets/user.png "User Page")
+
+Adding User:
+![alt text](https://github.com/aadityaagrawal/interview_creation_portal/blob/main/assets/add_user.png "Add User Page")
+
